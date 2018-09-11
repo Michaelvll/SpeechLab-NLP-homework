@@ -5,7 +5,7 @@ import utils.common as common
 
 
 class BiLstm_CRF(nn.Module):
-    def __init__(self, word2idx, tag2idx, embedding_dim, hidden_dim, num_layers=1):
+    def __init__(self, word2idx, tag2idx, embedding_dim, hidden_dim, num_layers=1, device=None):
         super(BiLstm_CRF, self).__init__()
         self.embedding_dim = embedding_dim
         self.tag2idx = tag2idx
@@ -20,12 +20,15 @@ class BiLstm_CRF(nn.Module):
         self.lstm = nn.LSTM(embedding_dim, hidden_dim //
                             2, num_layers=num_layers, bidirectional=True)
         self.hidden2tag = nn.Linear(hidden_dim, self.tag_size)
-        self.crf = nn.Parameter(torch.randn(self.tag_size, self.tag_size))
+        self.crf = nn.Parameter(torch.randn(
+            self.tag_size, self.tag_size).to(device))
 
         self.crf.data[:, self.tag2idx['<START>']] = -10000
         self.crf.data[self.tag2idx['<END>'], :] = -10000
 
         self.hidden = self.init_hidden()
+
+        self.device = device
 
     def init_hidden(self):
         return (torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2), torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2))

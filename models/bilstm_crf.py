@@ -5,8 +5,9 @@ import utils.common as common
 
 
 class BiLstm_CRF(nn.Module):
-    def __init__(self, word2idx, tag2idx, embedding_dim, hidden_dim, num_layers=1):
+    def __init__(self, word2idx, tag2idx, embedding_dim, hidden_dim, num_layers=1, device=None):
         super(BiLstm_CRF, self).__init__()
+        self.device = device
         self.embedding_dim = embedding_dim
         self.tag2idx = tag2idx
         self.word2idx = word2idx
@@ -20,29 +21,32 @@ class BiLstm_CRF(nn.Module):
         self.lstm = nn.LSTM(embedding_dim, hidden_dim //
                             2, num_layers=num_layers, bidirectional=True)
         self.hidden2tag = nn.Linear(hidden_dim, self.tag_size)
-        self.crf = nn.Parameter(torch.randn(self.tag_size, self.tag_size))
+        self.crf = nn.Parameter(torch.randn(
+            self.tag_size, self.tag_size).to(device))
 
         self.crf.data[:, self.tag2idx['<START>']] = -10000
         self.crf.data[self.tag2idx['<END>'], :] = -10000
 
         self.hidden = self.init_hidden()
 
+
     def init_hidden(self):
-        return (torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2), torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2))
+        return (torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2).to(self.device), torch.randn(2 * self.num_layers, 1, self.hidden_dim // 2).to(self.device))
 
     def _prepare_sentence(self, sentence):
-        return torch.tensor([self.word2idx[x] if x in self.word2idx else self.word2idx['<unk>'] for x in sentence])
+        return torch.tensor([self.word2idx[x] if x in self.word2idx else self.word2idx['<unk>'] for x in sentence], device=self.device)
 
     def _get_lstm_features(self, sentence):
         self.hidden = self.init_hidden()
-        embeds = self.embedding(sentence).view(len(sentence), 1, -1)
+        embeds = self.embedding(sentence)
+        embeds = embeds.view(sentence.size(0), 1, -1)
         lstm_out, self.hidden = self.lstm(embeds, self.hidden)
         lstm_out = lstm_out.view(len(sentence), self.hidden_dim)
         lstm_features = self.hidden2tag(lstm_out)
         return lstm_features
 
     def _crf_score_total(self, features):
-        score_previous = torch.full((1, self.tag_size), -10000.0)
+        score_previous = torch.full((1, self.tag_size), -10000.0,device=self.device)
         score_previous[0, self.tag2idx['<START>']] = 0.0
         for feature in features:
             score_previous = torch.t(score_previous).expand(-1, self.tag_size)
@@ -54,7 +58,7 @@ class BiLstm_CRF(nn.Module):
         return common.log_sum_exp(torch.t(score_end))
 
     def _crf_score_best(self, features, tags):
-        score = torch.zeros(1)
+        score = torch.zeros(1,device=self.device)
         tags = torch.cat(
             [torch.tensor([self.tag2idx['<START>']], dtype=torch.long), tags])
         for i, feature in enumerate(features):
@@ -63,7 +67,7 @@ class BiLstm_CRF(nn.Module):
         return score
 
     def _viterbi_labeling(self, features):
-        score_previous = torch.full((1, self.tag_size), -10000.0)
+        score_previous = torch.full((1, self.tag_size), -10000.0, device=self.device)
         score_previous[0, self.tag2idx['<START>']] = 0.0
 
         steps = []

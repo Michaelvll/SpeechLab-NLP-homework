@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 class Solver():
     def __init__(self, model, device,
-                 params=dict(), epoch=400, batch_size=400, print_every=10, save_best=False):
+                 params=dict(), epoch=400, batch_size=16, print_every=10, save_best=False):
         self.model = model
         self.device = device
         self.epoch = epoch
@@ -19,7 +19,7 @@ class Solver():
         print(params['lr'])
 
     def train(self, x, y, loss_function, dev_x=None, dev_y=None):
-        batch = Batch(len(y), batch_size=1)
+        batch = Batch(len(y), batch_size=self.batch_size)
         print_dev = False
         print_count = 0
         if dev_x is not None and dev_y is not None:
@@ -51,7 +51,7 @@ class Solver():
             #             print_count, batch.epoch, loss.item(), train_acc, dev_loss.item(), dev_acc))
             #         self.model.train()
             # print_count += 1
-        self.save_model()
+        # self.save_model()
 
     def predict(self, x_test, y_test=None, filename='predict.txt'):
         self.model.eval()

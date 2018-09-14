@@ -1,0 +1,331 @@
+Namespace(add_pred_rule=False, batchSize=2, bidirectional=True, bos_eos=False, crf=False, dataroot='data/mine', dataset='task', decoder_tied=False, deviceId=1, dropout=0.5, emb_size=128, enc_dec=True, experiment='exp', hidden_size=128, init_weight=0.2, lr=0.001, max_epoch=100, max_norm=5.0, mini_word_freq=1, noStdout=False, num_layers=1, optim='adam', out_path=None, random_seed=999, read_input_word2vec=None, read_model=None, read_vocab=None, save_model='model', save_model_to_cpu=False, save_vocab='vocab', st_weight=1, task='slot_tagger_with_focus', test_batchSize=1, test_file_name=None, testing=False)
+Experiment path: exp/model_slot_tagger_with_focus/data_task/bidir_True__emb_dim_128__hid_dim_128_x_1__bs_2__dropout_0.5__optimizer_adam__lr_0.001__mn_5.0__me_100__alpha_1__mwf_1
+Thu Sep 13 23:12:36 2018
+Valid GPU list: 0,1 ; GPU 0 (GeForce GTX 1080 Ti) is auto selected.
+Vocab size: 707 131
+Training starts at Thu Sep 13 23:12:38 2018
+Validation:	Epoch : -1	Time : 7.0737s	Loss : 20.61440	Fscore : 0.27980	LabelAcc : 0.00201
+Evaluation:	Epoch : -1	Time : 5.8183s	Loss : 20.61787	Fscore : 0.00000	LabelAcc : 0.00000
+Training:	Epoch : 0	Time : 18.1780s	Loss of slot tag : 12.68045
+Validation:	Epoch : 0	Time : 7.1262s	Loss : 4.20177	Fscore : 69.21653	LabelAcc : 0.86935
+Evaluation:	Epoch : 0	Time : 5.9338s	Loss : 57.95419	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 0	best valid F1 : 69.21653	test F1 : 0.00000	valid acc : 0.86935
+Training:	Epoch : 1	Time : 17.9194s	Loss of slot tag : 11.23421
+Validation:	Epoch : 1	Time : 6.9847s	Loss : 2.84512	Fscore : 83.22026	LabelAcc : 0.90352
+Evaluation:	Epoch : 1	Time : 6.0521s	Loss : 54.72456	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 1	best valid F1 : 83.22026	test F1 : 0.00000	valid acc : 0.90352
+Training:	Epoch : 2	Time : 18.3114s	Loss of slot tag : 11.44730
+Validation:	Epoch : 2	Time : 6.9508s	Loss : 2.22778	Fscore : 86.81352	LabelAcc : 0.93266
+Evaluation:	Epoch : 2	Time : 5.9270s	Loss : 60.64301	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 2	best valid F1 : 86.81352	test F1 : 0.00000	valid acc : 0.93266
+Training:	Epoch : 3	Time : 18.6197s	Loss of slot tag : 11.10969
+Validation:	Epoch : 3	Time : 6.9852s	Loss : 1.93797	Fscore : 90.32355	LabelAcc : 0.94070
+Evaluation:	Epoch : 3	Time : 5.8929s	Loss : 60.11083	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 3	best valid F1 : 90.32355	test F1 : 0.00000	valid acc : 0.94070
+Training:	Epoch : 4	Time : 18.4179s	Loss of slot tag : 9.82105
+Validation:	Epoch : 4	Time : 6.9625s	Loss : 1.90278	Fscore : 91.97716	LabelAcc : 0.94975
+Evaluation:	Epoch : 4	Time : 5.9098s	Loss : 86.19683	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 4	best valid F1 : 91.97716	test F1 : 0.00000	valid acc : 0.94975
+Training:	Epoch : 5	Time : 19.2849s	Loss of slot tag : 10.23536
+Validation:	Epoch : 5	Time : 6.9784s	Loss : 1.52990	Fscore : 93.84732	LabelAcc : 0.94975
+Evaluation:	Epoch : 5	Time : 6.0346s	Loss : 65.18674	Fscore : 0.00000	LabelAcc : 0.00000
+NEW BEST:	Epoch : 5	best valid F1 : 93.84732	test F1 : 0.00000	valid acc : 0.94975
+Training:	Epoch : 6	Time : 18.5500s	Loss of slot tag : 10.36765
+Validation:	Epoch : 6	Time : 6.9882s	Loss : 1.48650	Fscore : 95.18926	LabelAcc : 0.95879
+Evaluation:	Epoch : 6	Time : 5.9020s	Loss : 62.66825	Fscore : 0.00000	LabelAcc : 0.00784
+NEW BEST:	Epoch : 6	best valid F1 : 95.18926	test F1 : 0.00000	valid acc : 0.95879
+Training:	Epoch : 7	Time : 19.3127s	Loss of slot tag : 9.99365
+Validation:	Epoch : 7	Time : 7.1595s	Loss : 1.50224	Fscore : 95.42031	LabelAcc : 0.95578
+Evaluation:	Epoch : 7	Time : 5.8928s	Loss : 55.77505	Fscore : 0.00000	LabelAcc : 0.00448
+NEW BEST:	Epoch : 7	best valid F1 : 95.42031	test F1 : 0.00000	valid acc : 0.95578
+Training:	Epoch : 8	Time : 18.6764s	Loss of slot tag : 10.20807
+Validation:	Epoch : 8	Time : 6.9699s	Loss : 1.57734	Fscore : 95.98914	LabelAcc : 0.96583
+Evaluation:	Epoch : 8	Time : 5.9515s	Loss : 77.68541	Fscore : 0.00000	LabelAcc : 0.00784
+NEW BEST:	Epoch : 8	best valid F1 : 95.98914	test F1 : 0.00000	valid acc : 0.96583
+Training:	Epoch : 9	Time : 19.0291s	Loss of slot tag : 10.22397
+Validation:	Epoch : 9	Time : 7.1502s	Loss : 1.32601	Fscore : 95.92910	LabelAcc : 0.96482
+Evaluation:	Epoch : 9	Time : 5.8678s	Loss : 70.75514	Fscore : 0.00000	LabelAcc : 0.00896
+Training:	Epoch : 10	Time : 19.1664s	Loss of slot tag : 9.59271
+Validation:	Epoch : 10	Time : 7.1467s	Loss : 1.21649	Fscore : 96.06015	LabelAcc : 0.96683
+Evaluation:	Epoch : 10	Time : 5.8492s	Loss : 68.44270	Fscore : 0.00000	LabelAcc : 0.00896
+NEW BEST:	Epoch : 10	best valid F1 : 96.06015	test F1 : 0.00000	valid acc : 0.96683
+Training:	Epoch : 11	Time : 18.5606s	Loss of slot tag : 9.78281
+Validation:	Epoch : 11	Time : 6.9761s	Loss : 1.20091	Fscore : 96.56937	LabelAcc : 0.96985
+Evaluation:	Epoch : 11	Time : 5.9269s	Loss : 69.52729	Fscore : 0.00000	LabelAcc : 0.01008
+NEW BEST:	Epoch : 11	best valid F1 : 96.56937	test F1 : 0.00000	valid acc : 0.96985
+Training:	Epoch : 12	Time : 18.6751s	Loss of slot tag : 10.29853
+Validation:	Epoch : 12	Time : 6.9776s	Loss : 1.16111	Fscore : 96.61603	LabelAcc : 0.96784
+Evaluation:	Epoch : 12	Time : 5.8848s	Loss : 68.05017	Fscore : 0.00000	LabelAcc : 0.01008
+NEW BEST:	Epoch : 12	best valid F1 : 96.61603	test F1 : 0.00000	valid acc : 0.96784
+Training:	Epoch : 13	Time : 19.0555s	Loss of slot tag : 9.34933
+Validation:	Epoch : 13	Time : 6.9945s	Loss : 1.23063	Fscore : 97.21930	LabelAcc : 0.97286
+Evaluation:	Epoch : 13	Time : 5.9898s	Loss : 72.48714	Fscore : 0.00000	LabelAcc : 0.01008
+NEW BEST:	Epoch : 13	best valid F1 : 97.21930	test F1 : 0.00000	valid acc : 0.97286
+Training:	Epoch : 14	Time : 18.5487s	Loss of slot tag : 8.98659
+Validation:	Epoch : 14	Time : 6.9958s	Loss : 1.27947	Fscore : 97.09818	LabelAcc : 0.97186
+Evaluation:	Epoch : 14	Time : 5.8943s	Loss : 70.26473	Fscore : 0.00000	LabelAcc : 0.00560
+Training:	Epoch : 15	Time : 19.2237s	Loss of slot tag : 9.69713
+Validation:	Epoch : 15	Time : 6.9875s	Loss : 1.19505	Fscore : 97.00707	LabelAcc : 0.96985
+Evaluation:	Epoch : 15	Time : 5.9363s	Loss : 64.34312	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 16	Time : 18.9658s	Loss of slot tag : 9.23465
+Validation:	Epoch : 16	Time : 7.1684s	Loss : 1.10525	Fscore : 96.87781	LabelAcc : 0.96884
+Evaluation:	Epoch : 16	Time : 5.9763s	Loss : 76.29529	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 17	Time : 18.1595s	Loss of slot tag : 9.55913
+Validation:	Epoch : 17	Time : 7.0496s	Loss : 1.22048	Fscore : 96.85950	LabelAcc : 0.97588
+Evaluation:	Epoch : 17	Time : 5.9084s	Loss : 80.55105	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 18	Time : 18.5452s	Loss of slot tag : 9.27822
+Validation:	Epoch : 18	Time : 6.9815s	Loss : 1.18395	Fscore : 96.89049	LabelAcc : 0.97487
+Evaluation:	Epoch : 18	Time : 5.8825s	Loss : 80.29595	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 19	Time : 18.1905s	Loss of slot tag : 8.72064
+Validation:	Epoch : 19	Time : 7.1939s	Loss : 1.16952	Fscore : 97.23641	LabelAcc : 0.97688
+Evaluation:	Epoch : 19	Time : 6.2890s	Loss : 71.67098	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 19	best valid F1 : 97.23641	test F1 : 0.00000	valid acc : 0.97688
+Training:	Epoch : 20	Time : 18.1988s	Loss of slot tag : 9.15093
+Validation:	Epoch : 20	Time : 6.7587s	Loss : 1.02350	Fscore : 97.02970	LabelAcc : 0.97588
+Evaluation:	Epoch : 20	Time : 6.0954s	Loss : 76.41770	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 21	Time : 18.6201s	Loss of slot tag : 8.84025
+Validation:	Epoch : 21	Time : 6.9909s	Loss : 1.14129	Fscore : 97.29405	LabelAcc : 0.97186
+Evaluation:	Epoch : 21	Time : 5.9517s	Loss : 73.88539	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 21	best valid F1 : 97.29405	test F1 : 0.00000	valid acc : 0.97186
+Training:	Epoch : 22	Time : 18.4965s	Loss of slot tag : 8.64202
+Validation:	Epoch : 22	Time : 6.9764s	Loss : 1.15892	Fscore : 97.20385	LabelAcc : 0.97789
+Evaluation:	Epoch : 22	Time : 5.8584s	Loss : 67.87731	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 23	Time : 18.2624s	Loss of slot tag : 8.55453
+Validation:	Epoch : 23	Time : 7.1518s	Loss : 1.15638	Fscore : 97.15747	LabelAcc : 0.97789
+Evaluation:	Epoch : 23	Time : 5.9908s	Loss : 76.23018	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 24	Time : 20.1777s	Loss of slot tag : 9.26421
+Validation:	Epoch : 24	Time : 7.2931s	Loss : 1.27446	Fscore : 97.51992	LabelAcc : 0.97688
+Evaluation:	Epoch : 24	Time : 5.9777s	Loss : 80.33541	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 24	best valid F1 : 97.51992	test F1 : 0.00000	valid acc : 0.97688
+Training:	Epoch : 25	Time : 18.9461s	Loss of slot tag : 8.79833
+Validation:	Epoch : 25	Time : 7.2321s	Loss : 1.12152	Fscore : 96.90598	LabelAcc : 0.97387
+Evaluation:	Epoch : 25	Time : 5.9659s	Loss : 68.26949	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 26	Time : 18.6548s	Loss of slot tag : 8.35447
+Validation:	Epoch : 26	Time : 7.0278s	Loss : 1.26859	Fscore : 97.50601	LabelAcc : 0.97085
+Evaluation:	Epoch : 26	Time : 5.9913s	Loss : 86.97984	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 27	Time : 18.3717s	Loss of slot tag : 9.04912
+Validation:	Epoch : 27	Time : 7.3598s	Loss : 1.35014	Fscore : 97.57931	LabelAcc : 0.97588
+Evaluation:	Epoch : 27	Time : 5.9368s	Loss : 74.56888	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 27	best valid F1 : 97.57931	test F1 : 0.00000	valid acc : 0.97588
+Training:	Epoch : 28	Time : 17.3129s	Loss of slot tag : 8.82244
+Validation:	Epoch : 28	Time : 6.9488s	Loss : 1.46747	Fscore : 97.38188	LabelAcc : 0.97487
+Evaluation:	Epoch : 28	Time : 5.8391s	Loss : 77.20314	Fscore : 0.00000	LabelAcc : 0.01232
+Training:	Epoch : 29	Time : 18.2615s	Loss of slot tag : 9.01859
+Validation:	Epoch : 29	Time : 7.1211s	Loss : 1.22189	Fscore : 97.27779	LabelAcc : 0.96985
+Evaluation:	Epoch : 29	Time : 6.0165s	Loss : 82.88381	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 30	Time : 18.9852s	Loss of slot tag : 8.20739
+Validation:	Epoch : 30	Time : 7.0480s	Loss : 1.17610	Fscore : 97.56318	LabelAcc : 0.97487
+Evaluation:	Epoch : 30	Time : 5.8512s	Loss : 83.16192	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 31	Time : 17.9101s	Loss of slot tag : 8.19686
+Validation:	Epoch : 31	Time : 7.1311s	Loss : 1.21299	Fscore : 97.41509	LabelAcc : 0.97789
+Evaluation:	Epoch : 31	Time : 6.0118s	Loss : 73.29283	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 32	Time : 19.6457s	Loss of slot tag : 9.36362
+Validation:	Epoch : 32	Time : 7.0476s	Loss : 1.09532	Fscore : 97.59615	LabelAcc : 0.97789
+Evaluation:	Epoch : 32	Time : 6.0490s	Loss : 71.81734	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 32	best valid F1 : 97.59615	test F1 : 0.00000	valid acc : 0.97789
+Training:	Epoch : 33	Time : 19.2738s	Loss of slot tag : 8.39154
+Validation:	Epoch : 33	Time : 7.0611s	Loss : 1.27071	Fscore : 97.50151	LabelAcc : 0.97889
+Evaluation:	Epoch : 33	Time : 6.1211s	Loss : 74.05835	Fscore : 0.00000	LabelAcc : 0.01232
+Training:	Epoch : 34	Time : 17.7022s	Loss of slot tag : 8.56547
+Validation:	Epoch : 34	Time : 7.2253s	Loss : 1.20946	Fscore : 97.06811	LabelAcc : 0.97487
+Evaluation:	Epoch : 34	Time : 6.1234s	Loss : 70.63122	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 35	Time : 20.7599s	Loss of slot tag : 8.50487
+Validation:	Epoch : 35	Time : 7.0576s	Loss : 1.19831	Fscore : 97.54998	LabelAcc : 0.97588
+Evaluation:	Epoch : 35	Time : 5.9662s	Loss : 82.74506	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 36	Time : 18.0023s	Loss of slot tag : 9.05941
+Validation:	Epoch : 36	Time : 7.2087s	Loss : 1.35636	Fscore : 97.55145	LabelAcc : 0.97387
+Evaluation:	Epoch : 36	Time : 6.2037s	Loss : 72.39840	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 37	Time : 17.6631s	Loss of slot tag : 7.60551
+Validation:	Epoch : 37	Time : 7.2310s	Loss : 1.27656	Fscore : 97.50526	LabelAcc : 0.97688
+Evaluation:	Epoch : 37	Time : 6.0954s	Loss : 76.39739	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 38	Time : 18.2181s	Loss of slot tag : 8.57957
+Validation:	Epoch : 38	Time : 7.2370s	Loss : 1.42574	Fscore : 97.46056	LabelAcc : 0.97688
+Evaluation:	Epoch : 38	Time : 6.1377s	Loss : 73.20045	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 39	Time : 18.0817s	Loss of slot tag : 8.37444
+Validation:	Epoch : 39	Time : 7.2192s	Loss : 1.41709	Fscore : 97.67022	LabelAcc : 0.97186
+Evaluation:	Epoch : 39	Time : 6.0602s	Loss : 74.82917	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 39	best valid F1 : 97.67022	test F1 : 0.00000	valid acc : 0.97186
+Training:	Epoch : 40	Time : 17.9323s	Loss of slot tag : 8.56210
+Validation:	Epoch : 40	Time : 7.2929s	Loss : 1.35991	Fscore : 97.50526	LabelAcc : 0.97588
+Evaluation:	Epoch : 40	Time : 6.0718s	Loss : 73.47010	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 41	Time : 19.8011s	Loss of slot tag : 7.82546
+Validation:	Epoch : 41	Time : 7.1628s	Loss : 1.40840	Fscore : 97.55071	LabelAcc : 0.97387
+Evaluation:	Epoch : 41	Time : 6.0468s	Loss : 76.70138	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 42	Time : 17.8531s	Loss of slot tag : 8.21856
+Validation:	Epoch : 42	Time : 7.1563s	Loss : 1.38556	Fscore : 97.87874	LabelAcc : 0.97487
+Evaluation:	Epoch : 42	Time : 6.0783s	Loss : 83.40536	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 42	best valid F1 : 97.87874	test F1 : 0.00000	valid acc : 0.97487
+Training:	Epoch : 43	Time : 17.8975s	Loss of slot tag : 7.69483
+Validation:	Epoch : 43	Time : 7.2339s	Loss : 1.41454	Fscore : 97.68212	LabelAcc : 0.97487
+Evaluation:	Epoch : 43	Time : 6.1213s	Loss : 78.59188	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 44	Time : 18.3477s	Loss of slot tag : 8.71603
+Validation:	Epoch : 44	Time : 7.1862s	Loss : 1.24967	Fscore : 97.86273	LabelAcc : 0.97487
+Evaluation:	Epoch : 44	Time : 5.9180s	Loss : 83.00384	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 45	Time : 17.9136s	Loss of slot tag : 8.32116
+Validation:	Epoch : 45	Time : 6.9654s	Loss : 1.38180	Fscore : 97.68421	LabelAcc : 0.97487
+Evaluation:	Epoch : 45	Time : 5.9510s	Loss : 73.93950	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 46	Time : 18.0919s	Loss of slot tag : 9.14722
+Validation:	Epoch : 46	Time : 7.1043s	Loss : 1.43205	Fscore : 97.65555	LabelAcc : 0.97889
+Evaluation:	Epoch : 46	Time : 5.9760s	Loss : 77.51882	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 47	Time : 18.0018s	Loss of slot tag : 9.46764
+Validation:	Epoch : 47	Time : 6.9620s	Loss : 1.39187	Fscore : 97.41509	LabelAcc : 0.97588
+Evaluation:	Epoch : 47	Time : 5.9510s	Loss : 77.83069	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 48	Time : 18.1845s	Loss of slot tag : 9.45312
+Validation:	Epoch : 48	Time : 6.9785s	Loss : 1.37130	Fscore : 97.74368	LabelAcc : 0.97186
+Evaluation:	Epoch : 48	Time : 5.9596s	Loss : 70.07815	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 49	Time : 18.7516s	Loss of slot tag : 8.61920
+Validation:	Epoch : 49	Time : 7.0626s	Loss : 1.32430	Fscore : 97.73035	LabelAcc : 0.97688
+Evaluation:	Epoch : 49	Time : 5.9305s	Loss : 86.07312	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 50	Time : 18.4937s	Loss of slot tag : 8.71041
+Validation:	Epoch : 50	Time : 6.9770s	Loss : 1.42557	Fscore : 97.70029	LabelAcc : 0.97889
+Evaluation:	Epoch : 50	Time : 5.9521s	Loss : 65.96571	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 51	Time : 18.6452s	Loss of slot tag : 8.46039
+Validation:	Epoch : 51	Time : 7.1635s	Loss : 1.39686	Fscore : 97.97023	LabelAcc : 0.97588
+Evaluation:	Epoch : 51	Time : 5.9518s	Loss : 73.40566	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 51	best valid F1 : 97.97023	test F1 : 0.00000	valid acc : 0.97588
+Training:	Epoch : 52	Time : 19.2410s	Loss of slot tag : 8.69224
+Validation:	Epoch : 52	Time : 6.9843s	Loss : 1.33368	Fscore : 97.72966	LabelAcc : 0.97588
+Evaluation:	Epoch : 52	Time : 6.1135s	Loss : 70.66444	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 53	Time : 18.6552s	Loss of slot tag : 8.70684
+Validation:	Epoch : 53	Time : 7.1778s	Loss : 1.50328	Fscore : 97.58004	LabelAcc : 0.97789
+Evaluation:	Epoch : 53	Time : 5.8706s	Loss : 86.56527	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 54	Time : 18.2503s	Loss of slot tag : 8.85902
+Validation:	Epoch : 54	Time : 6.9895s	Loss : 1.34502	Fscore : 97.68421	LabelAcc : 0.97487
+Evaluation:	Epoch : 54	Time : 5.8884s	Loss : 67.88687	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 55	Time : 18.0695s	Loss of slot tag : 8.54613
+Validation:	Epoch : 55	Time : 6.7979s	Loss : 1.36101	Fscore : 97.56318	LabelAcc : 0.97688
+Evaluation:	Epoch : 55	Time : 5.7635s	Loss : 75.92612	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 56	Time : 18.0521s	Loss of slot tag : 8.86881
+Validation:	Epoch : 56	Time : 6.9563s	Loss : 1.45894	Fscore : 97.44438	LabelAcc : 0.97286
+Evaluation:	Epoch : 56	Time : 5.8531s	Loss : 84.53820	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 57	Time : 18.4171s	Loss of slot tag : 8.92672
+Validation:	Epoch : 57	Time : 6.9895s	Loss : 1.38309	Fscore : 97.57640	LabelAcc : 0.97186
+Evaluation:	Epoch : 57	Time : 5.9601s	Loss : 75.49120	Fscore : 0.00000	LabelAcc : 0.01232
+Training:	Epoch : 58	Time : 19.2468s	Loss of slot tag : 7.96218
+Validation:	Epoch : 58	Time : 7.4649s	Loss : 1.37883	Fscore : 97.81922	LabelAcc : 0.97286
+Evaluation:	Epoch : 58	Time : 6.2324s	Loss : 75.92658	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 59	Time : 22.8422s	Loss of slot tag : 8.78956
+Validation:	Epoch : 59	Time : 7.1479s	Loss : 1.31704	Fscore : 97.65343	LabelAcc : 0.97688
+Evaluation:	Epoch : 59	Time : 6.0115s	Loss : 83.44763	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 60	Time : 22.4469s	Loss of slot tag : 8.60941
+Validation:	Epoch : 60	Time : 7.1827s	Loss : 1.40639	Fscore : 97.70029	LabelAcc : 0.97889
+Evaluation:	Epoch : 60	Time : 6.0488s	Loss : 79.35599	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 61	Time : 21.5105s	Loss of slot tag : 8.39812
+Validation:	Epoch : 61	Time : 7.1921s	Loss : 1.50382	Fscore : 97.57785	LabelAcc : 0.97487
+Evaluation:	Epoch : 61	Time : 6.0309s	Loss : 79.86122	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 62	Time : 21.7857s	Loss of slot tag : 8.41005
+Validation:	Epoch : 62	Time : 7.2092s	Loss : 1.35183	Fscore : 97.62406	LabelAcc : 0.97487
+Evaluation:	Epoch : 62	Time : 5.9327s	Loss : 95.36228	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 63	Time : 24.3274s	Loss of slot tag : 8.89093
+Validation:	Epoch : 63	Time : 7.2841s	Loss : 1.30150	Fscore : 97.54924	LabelAcc : 0.97688
+Evaluation:	Epoch : 63	Time : 5.9912s	Loss : 77.38786	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 64	Time : 22.1148s	Loss of slot tag : 8.57726
+Validation:	Epoch : 64	Time : 7.1704s	Loss : 1.36240	Fscore : 97.47444	LabelAcc : 0.97588
+Evaluation:	Epoch : 64	Time : 5.9459s	Loss : 97.65621	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 65	Time : 23.1446s	Loss of slot tag : 8.72538
+Validation:	Epoch : 65	Time : 7.1615s	Loss : 1.40888	Fscore : 97.56318	LabelAcc : 0.97789
+Evaluation:	Epoch : 65	Time : 6.0073s	Loss : 84.66595	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 66	Time : 18.1634s	Loss of slot tag : 8.45350
+Validation:	Epoch : 66	Time : 7.1638s	Loss : 1.29984	Fscore : 97.53458	LabelAcc : 0.97588
+Evaluation:	Epoch : 66	Time : 6.0463s	Loss : 70.38871	Fscore : 0.00000	LabelAcc : 0.01232
+Training:	Epoch : 67	Time : 18.3686s	Loss of slot tag : 8.58904
+Validation:	Epoch : 67	Time : 7.2367s	Loss : 1.32124	Fscore : 97.68630	LabelAcc : 0.97588
+Evaluation:	Epoch : 67	Time : 6.0226s	Loss : 73.51358	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 68	Time : 23.5503s	Loss of slot tag : 8.76835
+Validation:	Epoch : 68	Time : 7.1789s	Loss : 1.18945	Fscore : 97.81725	LabelAcc : 0.97688
+Evaluation:	Epoch : 68	Time : 6.0125s	Loss : 91.33248	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 69	Time : 20.6347s	Loss of slot tag : 8.42510
+Validation:	Epoch : 69	Time : 7.2598s	Loss : 1.30776	Fscore : 97.59398	LabelAcc : 0.97688
+Evaluation:	Epoch : 69	Time : 6.0048s	Loss : 91.80559	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 70	Time : 20.1882s	Loss of slot tag : 8.46921
+Validation:	Epoch : 70	Time : 7.2425s	Loss : 1.36677	Fscore : 97.76108	LabelAcc : 0.97990
+Evaluation:	Epoch : 70	Time : 5.9941s	Loss : 76.55857	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 71	Time : 21.0106s	Loss of slot tag : 9.24199
+Validation:	Epoch : 71	Time : 7.2076s	Loss : 1.30782	Fscore : 97.60938	LabelAcc : 0.97588
+Evaluation:	Epoch : 71	Time : 6.0253s	Loss : 85.35370	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 72	Time : 20.1363s	Loss of slot tag : 8.82183
+Validation:	Epoch : 72	Time : 7.1968s	Loss : 1.23227	Fscore : 97.56537	LabelAcc : 0.97688
+Evaluation:	Epoch : 72	Time : 5.9929s	Loss : 71.40156	Fscore : 0.00000	LabelAcc : 0.01008
+Training:	Epoch : 73	Time : 19.1643s	Loss of slot tag : 8.82001
+Validation:	Epoch : 73	Time : 7.1615s	Loss : 1.36721	Fscore : 97.57931	LabelAcc : 0.97588
+Evaluation:	Epoch : 73	Time : 5.9947s	Loss : 86.18410	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 74	Time : 20.8215s	Loss of slot tag : 8.88215
+Validation:	Epoch : 74	Time : 7.1701s	Loss : 1.34979	Fscore : 97.47368	LabelAcc : 0.97688
+Evaluation:	Epoch : 74	Time : 5.9957s	Loss : 74.22631	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 75	Time : 19.3351s	Loss of slot tag : 8.28930
+Validation:	Epoch : 75	Time : 7.1992s	Loss : 1.33552	Fscore : 97.37040	LabelAcc : 0.97588
+Evaluation:	Epoch : 75	Time : 6.0039s	Loss : 77.01040	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 76	Time : 18.8561s	Loss of slot tag : 8.80542
+Validation:	Epoch : 76	Time : 7.1619s	Loss : 1.28866	Fscore : 97.56318	LabelAcc : 0.97688
+Evaluation:	Epoch : 76	Time : 6.0374s	Loss : 67.54649	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 77	Time : 19.7112s	Loss of slot tag : 8.04389
+Validation:	Epoch : 77	Time : 7.2056s	Loss : 1.27625	Fscore : 97.50451	LabelAcc : 0.98090
+Evaluation:	Epoch : 77	Time : 6.0026s	Loss : 92.29331	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 78	Time : 20.0538s	Loss of slot tag : 8.76320
+Validation:	Epoch : 78	Time : 7.2112s	Loss : 1.44504	Fscore : 97.60866	LabelAcc : 0.97688
+Evaluation:	Epoch : 78	Time : 6.0767s	Loss : 69.83631	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 79	Time : 19.9494s	Loss of slot tag : 8.40595
+Validation:	Epoch : 79	Time : 7.1842s	Loss : 1.34116	Fscore : 97.56464	LabelAcc : 0.97387
+Evaluation:	Epoch : 79	Time : 6.0017s	Loss : 68.89814	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 80	Time : 19.7379s	Loss of slot tag : 8.19061
+Validation:	Epoch : 80	Time : 7.1558s	Loss : 1.36280	Fscore : 97.58004	LabelAcc : 0.97889
+Evaluation:	Epoch : 80	Time : 6.0183s	Loss : 82.84615	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 81	Time : 19.9348s	Loss of slot tag : 9.09993
+Validation:	Epoch : 81	Time : 7.1732s	Loss : 1.20835	Fscore : 97.67022	LabelAcc : 0.97487
+Evaluation:	Epoch : 81	Time : 6.0101s	Loss : 81.93346	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 82	Time : 22.1132s	Loss of slot tag : 9.21423
+Validation:	Epoch : 82	Time : 7.1592s	Loss : 1.44653	Fscore : 97.44438	LabelAcc : 0.97387
+Evaluation:	Epoch : 82	Time : 5.9728s	Loss : 69.46603	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 83	Time : 23.4898s	Loss of slot tag : 8.76965
+Validation:	Epoch : 83	Time : 7.1913s	Loss : 1.20630	Fscore : 97.45903	LabelAcc : 0.97487
+Evaluation:	Epoch : 83	Time : 5.9929s	Loss : 107.05656	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 84	Time : 22.3782s	Loss of slot tag : 8.81926
+Validation:	Epoch : 84	Time : 7.2058s	Loss : 1.43878	Fscore : 97.32652	LabelAcc : 0.97688
+Evaluation:	Epoch : 84	Time : 6.0125s	Loss : 90.75897	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 85	Time : 21.0257s	Loss of slot tag : 8.97797
+Validation:	Epoch : 85	Time : 7.2283s	Loss : 1.40193	Fscore : 97.54850	LabelAcc : 0.97688
+Evaluation:	Epoch : 85	Time : 6.0250s	Loss : 77.34956	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 86	Time : 24.4248s	Loss of slot tag : 8.77576
+Validation:	Epoch : 86	Time : 7.4595s	Loss : 1.44978	Fscore : 97.35338	LabelAcc : 0.97588
+Evaluation:	Epoch : 86	Time : 6.1514s	Loss : 80.63528	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 87	Time : 23.9347s	Loss of slot tag : 9.21310
+Validation:	Epoch : 87	Time : 7.0867s	Loss : 1.41945	Fscore : 97.54998	LabelAcc : 0.97588
+Evaluation:	Epoch : 87	Time : 5.9015s	Loss : 71.76178	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 88	Time : 21.4574s	Loss of slot tag : 8.81301
+Validation:	Epoch : 88	Time : 7.2227s	Loss : 1.35456	Fscore : 97.67022	LabelAcc : 0.97688
+Evaluation:	Epoch : 88	Time : 6.0515s	Loss : 91.44252	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 89	Time : 20.9217s	Loss of slot tag : 8.57782
+Validation:	Epoch : 89	Time : 7.1906s	Loss : 1.25613	Fscore : 97.81988	LabelAcc : 0.97789
+Evaluation:	Epoch : 89	Time : 6.0018s	Loss : 86.06581	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 90	Time : 23.2863s	Loss of slot tag : 9.16029
+Validation:	Epoch : 90	Time : 7.2172s	Loss : 1.26752	Fscore : 97.70029	LabelAcc : 0.97588
+Evaluation:	Epoch : 90	Time : 6.0680s	Loss : 69.38360	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 91	Time : 23.0928s	Loss of slot tag : 8.37618
+Validation:	Epoch : 91	Time : 7.3148s	Loss : 1.35272	Fscore : 97.70167	LabelAcc : 0.97688
+Evaluation:	Epoch : 91	Time : 6.0099s	Loss : 78.20089	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 92	Time : 23.3722s	Loss of slot tag : 8.47089
+Validation:	Epoch : 92	Time : 7.2930s	Loss : 1.39397	Fscore : 97.64087	LabelAcc : 0.97889
+Evaluation:	Epoch : 92	Time : 6.0514s	Loss : 84.22573	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 93	Time : 20.4388s	Loss of slot tag : 8.89918
+Validation:	Epoch : 93	Time : 7.3021s	Loss : 1.24409	Fscore : 97.59471	LabelAcc : 0.97688
+Evaluation:	Epoch : 93	Time : 5.8933s	Loss : 87.88588	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 94	Time : 18.5024s	Loss of slot tag : 9.20632
+Validation:	Epoch : 94	Time : 7.0035s	Loss : 1.30996	Fscore : 97.64087	LabelAcc : 0.97889
+Evaluation:	Epoch : 94	Time : 5.8842s	Loss : 74.65428	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 95	Time : 18.8577s	Loss of slot tag : 9.38056
+Validation:	Epoch : 95	Time : 7.2135s	Loss : 1.31838	Fscore : 97.73035	LabelAcc : 0.97789
+Evaluation:	Epoch : 95	Time : 5.9264s	Loss : 67.28444	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 96	Time : 18.7689s	Loss of slot tag : 8.97862
+Validation:	Epoch : 96	Time : 6.7782s	Loss : 1.47646	Fscore : 98.01742	LabelAcc : 0.97286
+Evaluation:	Epoch : 96	Time : 5.7010s	Loss : 77.24882	Fscore : 0.00000	LabelAcc : 0.01120
+NEW BEST:	Epoch : 96	best valid F1 : 98.01742	test F1 : 0.00000	valid acc : 0.97286
+Training:	Epoch : 97	Time : 18.6169s	Loss of slot tag : 9.12802
+Validation:	Epoch : 97	Time : 7.0709s	Loss : 1.50315	Fscore : 97.78981	LabelAcc : 0.97487
+Evaluation:	Epoch : 97	Time : 5.9603s	Loss : 75.81873	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 98	Time : 18.3037s	Loss of slot tag : 9.29724
+Validation:	Epoch : 98	Time : 7.0308s	Loss : 1.40237	Fscore : 97.65695	LabelAcc : 0.97588
+Evaluation:	Epoch : 98	Time : 6.0348s	Loss : 79.04459	Fscore : 0.00000	LabelAcc : 0.01120
+Training:	Epoch : 99	Time : 18.8033s	Loss of slot tag : 8.93171
+Validation:	Epoch : 99	Time : 7.0342s	Loss : 1.40218	Fscore : 97.76041	LabelAcc : 0.97789
+Evaluation:	Epoch : 99	Time : 5.9346s	Loss : 77.50677	Fscore : 0.00000	LabelAcc : 0.01120
+BEST RESULT: 	Epoch : 96	best valid (Loss: 1.47646 F1 : 98.01742)	best test (Loss: 77.24882 F1 : 0.00000) 

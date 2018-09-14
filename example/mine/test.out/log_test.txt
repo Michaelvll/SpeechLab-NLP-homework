@@ -1,0 +1,4 @@
+Namespace(add_pred_rule=False, batchSize=64, bidirectional=False, bos_eos=False, crf=True, dataroot='data/mine', dataset='task', decoder_tied=False, deviceId=0, dropout=0.0, emb_size=100, enc_dec=False, experiment='exp', hidden_size=100, init_weight=0.2, lr=0.01, max_epoch=50, max_norm=5, mini_word_freq=2, noStdout=False, num_layers=1, optim='sgd', out_path='test.out', random_seed=999, read_input_word2vec=None, read_model='model', read_vocab='vocab', save_model='model', save_model_to_cpu=False, save_vocab='vocab', st_weight=1, task='slot_tagger_with_crf', test_batchSize=64, test_file_name='test', testing=True)
+Experiment path: test.out
+Wed Sep 12 00:54:25 2018
+Valid GPU list: 0,1,2,3 ; GPU 0 (GeForce GTX 1080) is auto selected.

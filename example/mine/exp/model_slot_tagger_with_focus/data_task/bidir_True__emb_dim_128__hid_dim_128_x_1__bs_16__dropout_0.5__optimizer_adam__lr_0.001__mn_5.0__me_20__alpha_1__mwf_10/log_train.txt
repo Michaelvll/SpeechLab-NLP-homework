@@ -1,0 +1,6 @@
+Namespace(add_pred_rule=False, batchSize=16, bidirectional=True, bos_eos=False, crf=False, dataroot='data/mine', dataset='task', decoder_tied=False, deviceId=1, dropout=0.5, emb_size=128, enc_dec=True, experiment='exp', hidden_size=128, init_weight=0.2, lr=0.001, max_epoch=20, max_norm=5.0, mini_word_freq=10, noStdout=False, num_layers=1, optim='adam', out_path=None, random_seed=999, read_input_word2vec=None, read_model=None, read_vocab=None, save_model='model', save_model_to_cpu=False, save_vocab='vocab', st_weight=1, task='slot_tagger_with_focus', test_batchSize=1, test_file_name=None, testing=False)
+Experiment path: exp/model_slot_tagger_with_focus/data_task/bidir_True__emb_dim_128__hid_dim_128_x_1__bs_16__dropout_0.5__optimizer_adam__lr_0.001__mn_5.0__me_20__alpha_1__mwf_10
+Thu Sep 13 16:16:05 2018
+Valid GPU list: 0,1,2,3 ; GPU 0 (GeForce GTX 1080) is auto selected.
+Vocab size: 308 131
+Training starts at Thu Sep 13 16:16:09 2018
